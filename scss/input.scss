@@ -1,0 +1,146 @@
+@import url(https://fonts.googleapis.com/css?family=PT+Sans:400,700);
+
+	//color palette;
+	$color-red: #ff1a1a;
+	$color-gray: #666;
+	$color-green: #41d873;
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'PT Sans', sans-serif;
+	padding: 20px;
+	margin: 20px;
+}
+
+form {
+	max-width: 450px;
+	margin: 0 auto;
+
+  //set FA info icon to blue & add functionality to mobile;
+	.info:hover,
+	.info:focus,
+	.info:active,
+	.info:click {
+		color: blue;
+	}
+
+	> div {
+		position: relative;
+		overflow: hidden;
+		background: white;
+		border-bottom: 1px solid #ccc;
+
+		> label {
+			opacity: 0.3;
+			font-weight: bold;
+			position: absolute;
+			top: 22px;
+			left: 20px;
+			-webkit-transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
+			transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1);		
+    }
+    
+    //set label transition pattern to a variable;
+    %label-transition {
+      bottom: 5px;
+      left: 50%;
+      color: $color-gray;
+      font-size: 70%;
+    }
+
+    //input box styling
+		> input[type='number'] {
+			-webkit-appearance: none;
+			margin: 0;
+			-moz-appearance: textfield;
+			position: relative;
+			width: 100%;
+			border: 0;
+			padding: 25px 20px 20px 50px;
+			background: #eee;
+
+			&:focus {
+				outline: 0;
+				background: white;
+				& + label {
+          @extend %label-transition;
+				}
+      }
+      
+			&:valid {
+				background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/check.svg);
+				background-size: 20px;
+				background-repeat: no-repeat;
+				background-position: 90% 50%;
+				& + label {
+          @extend %label-transition;
+				}
+      }
+      
+			&:invalid:not(:focus):not(:placeholder-shown) {
+				background: pink;
+				& + label {
+          @extend %label-transition;
+					opacity: 0;
+				}
+      }
+      
+			&:invalid:focus:not(:placeholder-shown) {
+				& ~ .requirements {
+					max-height: 200px;
+					padding: 0 30px 20px 50px;
+				}
+			}
+		}
+
+		.requirements {
+			padding: 0 30px 0 50px;
+			color: #999;
+			max-height: 0;
+			transition: 0.28s;
+			overflow: hidden;
+			color: $color-red;
+			font-style: italic;
+		}
+	}
+
+	//button rules
+
+	%button-shared {
+		display: block;
+		width: 100%;
+		margin: 20px 0;
+		border: 0;
+		padding: 20px;
+		font-size: 1.2rem;
+	}
+
+	input[type='submit'] {
+		@extend %button-shared;
+		background: $color-green;
+		color: black;
+		&:hover {
+			background: white;
+			color: $color-green;
+			border: solid $color-green;
+		}
+	}
+
+	input[type='reset'] {
+		@extend %button-shared;
+		background: $color-red;
+		color: white;
+		&:hover {
+			background: white;
+			color: $color-red;
+			border: solid $color-red;
+		}
+	}
+
+	.form-check {
+		cursor: pointer;
+	}
+}

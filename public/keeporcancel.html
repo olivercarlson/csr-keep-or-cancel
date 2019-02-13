@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Sapphire Reserve: Keep or Cancel v2.0 </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.bundle.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+        <link href="/css/input.css" rel="stylesheet" type="text/css" />
+
+    </head>
+
+    <body>
+        <!-- add in information about why you should keep or cancel the card. -->
+
+            <div class="container my-5">
+                    <intro>
+                        <h3 class="text-center">
+                            <p>
+                                <strong>Keep Or Cancel for The Sapphire Reserve v2.0</strong>
+                            </p>
+                        </h3>
+            
+                        <div class="text-center">
+                            <p>This guide is specifically aimed at the
+                            <strong>Sapphire Reserve (CSR) </strong> credit card and
+                            it's supporting card, the Freedom Unlimited.</p>
+            
+                            <p> This will walk you through a sequential series of questions and
+                                return a verdict unique to your situation.</p>
+
+                            <p> Hovering over the information icon will give you some guidance for each question.</p>
+                        </div>
+                    </intro>
+                    <br />
+
+
+        <form action="get-results" method="POST" name="questionairre" id="questionairre">
+            <div class="form-group">
+                <h5>
+                    <strong>Question 1:</strong> How much do you value each Ultimate Rewards Point? <a href="#" data-toggle="tooltip" data-placement="right" title=
+                    "Values here range from 1.0 cents-per-point (1 UR point = 1 penny) to up to 5.0 cents per point (5 pennies = 1 UR). Typical values of redemptions fall somewhere between 1.0-2.0 cpp. However, for people who redeem exclusively international business/first class it is possible to get higher values than this. If you are unsure, use 1.5 here">
+                        <i class="fa fa-info-circle" aria-hidden=true></i></a>
+                </h5>
+            </div>
+
+            <div>
+                <input type="number" id="valueUR" name="valueUR" step="0.01"    
+                    min="1.0" max="5.0" required="required" placeholder=" " />
+                <label for="valueUR"> Cents Per Point</label>
+                <div class="requirements"> Enter a value between 1.00 and 5.00 cents per point</div>
+            </div>
+
+            <br>
+            <br>
+
+            <div class="form-group">
+                <h5>
+                    <strong>Question 2:</strong> How much do you anticipate
+                    spending on <strong>Travel</strong> on the Sapphire Reserve?
+                    <a href="#" data-toggle="tooltip" data-placement="right" title="This category includes: hotels, airfare, commuter passes, parking/tolls, and rideshare services. Card earns 3 pts/$ spent here">
+                            <i class="fa fa-info-circle" aria-hidden=true></i></a>
+                </h5>
+            </div>
+
+
+            <div>
+                <input id="spendTravel" type="number" min="0" max="10000000"
+                    name="spendTravel"
+                    required="required" placeholder=" "></input>
+            <label for="spendTravel">   Annual Travel Spending</label>
+            <div class="requirements"> Enter an amount between $0 and $10,000,000 </div>
+        </div>
+
+        <br>
+        <br>
+
+        <div class="form-group">
+                <h5>
+                        <strong>Question 3:</strong> How much do you anticipate spending on <strong>Dining</strong>
+                        on the Sapphire Reserve?
+                        <a href="#" data-toggle="tooltip" data-placement="right" title="This category includes: restauraunts, fast food, and coffee shops. Card earns 3 pts/$ spent here. Does not include grocery stores.">
+                                <i class="fa fa-info-circle" aria-hidden=true></i></a>
+                </h5>
+            </div>
+
+
+            <div>
+                <input id="spendDining" type="number" min="0" max="10000000"
+                    name="spendDining"
+                    required="required" placeholder=" "></input>
+            <label for="spendDining">  Annual Dining Spending</label>
+            <div class="requirements"> Enter an amount between $0 and $10,000,000 </div>
+        </div>
+
+        <br>
+        <br>
+
+        <div class="form-group">
+                <h5>
+                        <strong>Question 4:</strong> Will you also be using the <strong> Freedom Unlimited? </strong>
+                        <a href="#" data-toggle="tooltip" data-placement="right" title="If this box is ticked, the Freedom Unlimited's earn rate of 1.5 pts/$ everywhere will be used in Question #5 place of the normal rate of 1 pt/$ everywhere for the Sapphire Reserve. This does not affect the 3X earn rate in Questions 2 & 3">
+                                <i class="fa fa-info-circle" aria-hidden=true></i></a>
+                </h5>
+        </div>
+        <h5>
+                <span class="form-check">
+                    <input type="checkbox" name="useCFU" id="useCFU" class="form-check-input">
+                    <label class="form-check-label" for="useCFU"> Use Freedom Unlimited for Non-bonused Spending </label>
+                </span>
+        </h5>
+        <br>
+        <br>
+
+
+        <div class="form-group">
+                <h5>
+                        <strong>Question 5:</strong> How much do you anticipate spending in <strong>all
+                                other categories</strong> on the Sapphire Reserve / Freedom Unlimited? 
+                                <a href="#" data-toggle="tooltip" data-placement="right" title="This category includes all other purchases with either the CSR or FU depending on your answer above.">
+                                        <i class="fa fa-info-circle" aria-hidden=true></i></a>
+                </h5>
+            </div>
+
+            <div>
+                <input id="spendEE" type="number" min="0" max="10000000"
+                    name="spendEE"
+                    required="required" placeholder=" "></input>
+            <label for="spendEE"> Annual Non-bonused Spending</label>
+            <div class="requirements"> Enter an amount between $0 and $10,000,000 </div>
+        </div>
+
+        <br>
+        <br>
+
+        <div class="form-group">
+                <h5>
+                        <strong>Question 6:</strong> What do you value the $300 Travel Credit at?
+                        <a href="#" data-toggle="tooltip" data-placement="right" title="Automatic reimbursement of purchases including parking tolls, public transit, hotels, and airfare.">
+                                <i class="fa fa-info-circle" aria-hidden=true></i></a>
+
+                </h5>
+            </div>
+
+        <div>
+            <input id="valueCredit" type="number" min="0" max="300" placeholder= " " name="valueCredit" required="required"></input>
+            <label for="valueCredit"> Travel Credit Value</label>   
+            <div class="requirements"> Enter an amount up to $300 </div>
+        </div>
+
+
+        <br>
+        <br>
+
+        <div class="form-group">
+                <h5>
+                        <strong>Question 7:</strong> What do you value the Priority Pass Memberhsip at?
+                        <a href="#" data-toggle="tooltip" data-placement="right" title="Free entry for you and two guests at any of the Priority Pass lounges at airports worldwide. Recommended valuation is either $0 total or ~$10 per person per visit.">
+                                <i class="fa fa-info-circle" aria-hidden=true></i></a>
+
+                </h5>
+            </div>
+
+        <div>
+                <input id="valuePP" type="number" min="0" max="1000" name="valuePP" required="required" default="0" placeholder=""></input>
+            <label for="valuePP"> Priority Pass Membership Value </label>
+            <div class="requirements"> Enter a value up to $1,000 </div>
+        </div>
+
+        <br>
+        <br>
+
+        <div class="form-group">
+                <h5>
+                        <strong>Question 8:</strong> What do you value the Trip Delay and other insurance at?
+                        <a href="#" data-toggle="tooltip" data-placement="right" title="Includes primary collision damage waiver on rental cars and trip delay/cancellation insurance due to weather and related. Recommended value is $0">
+                                <i class="fa fa-info-circle" aria-hidden=true></i></a>
+                </h5>
+            </div>
+
+        <div>
+                <input id="valueInsurance" type="number" min="0" max="1000" name="valueInsurance" required="required" placeholder=""></input>
+            <label for="valueInsurance"> Value of Insurance Benefits </label>
+            <div class="requirements"> Enter a value up to $1,000.</div>
+        </div> 
+<br>
+<br>
+
+        <input class="btn" type="submit" value="Submit" id="submitbutton" name="submitbutton"></input>
+        <input class="btn btn-primary btn block" type="reset" value="Reset" id="clear" name="clear"></input>
+
+    </form>
+
+<script>
+    $(document).ready(function() {
+		$('[data-toggle="tooltip"]').tooltip();
+    });
+    
+    $('subtmitbutton').click(function() {
+		$('form').hide();
+    });
+
+</script>    
+    <script src="_js/main.js"></script>
+</body>
