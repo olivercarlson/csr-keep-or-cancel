@@ -5,27 +5,16 @@ const express = require('express'),
 	bodyParser = require('body-parser'),
 	mongoose = require('mongoose'),
 	helmet = require('helmet'),
-	rateLimit = require('express-rate-limit');
+	rateLimit = require('express-rate-limit'),
+	compression = require('compression');
 
 require('dotenv').config()
 
 const app = express();
 
 app.use(helmet());
-
-// app.use(helmet({
-// 	contentSecurityPolicy: {
-// 		directives: {
-// 			defaultSrc: ["'self'"],
-// 			scriptSrc: ["'self'", 'salty-lake-23071.herokuapp.com', "'unsafe-inline'", 'maxcdn.bootstrapcdn.com', 'cdnjs.cloudflare.com', 'stackpath.bootstrapcdn.com'],
-// 			styleSrc: ["'self'", 'salty-lake-23071.herokuapp.com', "'unsafe-inline'", 'maxcdn.bootstrapcdn.com', 'cdnjs.cloudflare.com','stackpath.bootstrapcdn.com', 'fonts.googleapis.com' ],
-// 			fontSrc: ["'self'", 'salty-lake-23071.herokuapp.com', 'maxcdn.bootstrapcdn.com', 'cdnjs.cloudflare.com', 'fonts.googleapis.com', 'fonts.gstatic.com'],
-// 			imgSrc: ["'self'", 'salty-lake-23071.herokuapp.com', 's3-us-west-2.amazonaws.com' ]
-// 		}
-// 	}
-// }));
-
 app.enable('trust proxy');
+app.use(compression());
 
 const submitLimiter = rateLimit({
 	windowMs: 24 * 60 * 60 * 1000,
