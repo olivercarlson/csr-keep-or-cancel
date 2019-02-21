@@ -51,12 +51,16 @@ app.use((req, res, next) => {
 	res.send('Error 404, location not found');
 });
 
+const MONGODB_URI = `mongodb+srv://${process.env.MONGO_USER}:${
+  process.env.MONGO_PASSWORD
+}@cluster0-bt32j.mongodb.net/${process.env.MONGO_DEFAULT_DATABASE}`;
+
+
 mongoose
-	.connect(
-		process.env.DB_CONNECT, { useNewUrlParser: true }
-	)
-	.then(() => {
-		console.log('Connected to the database successfully!');
-		app.listen(process.env.PORT || 3000);
-	})
-	.catch(() => console.log('error connecting to dB'));
+  .connect(MONGODB_URI, {useNewUrlParser: true})
+  .then(result => {
+      app.listen(process.env.PORT || 3000);
+  })
+  .catch(err => {
+    console.log(err);
+  });
