@@ -15,10 +15,10 @@ app.use(helmet({
 	contentSecurityPolicy: {
 		directives: {
 			defaultSrc: ["'self'"],
-			scriptSrc: ["'self'", "'unsafe-inline'", 'maxcdn.bootstrapcdn.com', 'cdnjs.cloudflare.com', 'stackpath.bootstrapcdn.com'],
-			styleSrc: ["'self'", "'unsafe-inline'", 'maxcdn.bootstrapcdn.com', 'cdnjs.cloudflare.com','stackpath.bootstrapcdn.com', 'fonts.googleapis.com' ],
-			fontSrc: ["'self'", 'maxcdn.bootstrapcdn.com', 'cdnjs.cloudflare.com', 'fonts.googleapis.com', 'fonts.gstatic.com'],
-			imgSrc: ["'self'", 's3-us-west-2.amazonaws.com' ]
+			scriptSrc: ["'self'", 'salty-lake-23071.herokuapp.com', "'unsafe-inline'", 'maxcdn.bootstrapcdn.com', 'cdnjs.cloudflare.com', 'stackpath.bootstrapcdn.com'],
+			styleSrc: ["'self'", 'salty-lake-23071.herokuapp.com', "'unsafe-inline'", 'maxcdn.bootstrapcdn.com', 'cdnjs.cloudflare.com','stackpath.bootstrapcdn.com', 'fonts.googleapis.com' ],
+			fontSrc: ["'self'", 'salty-lake-23071.herokuapp.com', 'maxcdn.bootstrapcdn.com', 'cdnjs.cloudflare.com', 'fonts.googleapis.com', 'fonts.gstatic.com'],
+			imgSrc: ["'self'", 'salty-lake-23071.herokuapp.com', 's3-us-west-2.amazonaws.com' ]
 		}
 	}
 }));
