@@ -105,7 +105,8 @@ form input[type=reset]:hover {
   color: #ff1a1a;
   border: solid #ff1a1a;
 }
-form .form-check {
+
+.form-check .useCFU {
   cursor: pointer;
 }
 

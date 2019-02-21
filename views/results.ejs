@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title><%= pageTitle %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="input.css">
+    <script src="main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+<body>
+    <main>    
+            <div class="container-fluid text-center">
+                    <% if (verdict.keepCSR)  { %>
+                        <h1> KEEP! </h1>
+                            <p> Based off of the information that you have entered, it appears that you <strong> are </strong> getting your money's worth out of the card. </p>
+                        <% } else if (verdict.csrValue > verdict.replacementCardValue) { %>
+                            <h1> CANCEL! </h1>
+                                <p> Based off of the information that you have entered, it appears that you are likely <strong> not </strong> getting your money's worth. </p>
+                                  <p>While the values you have input lead to a more indeterminate case, it is still recommended to cancel because you are much more likely to get money and pay less fees by using one or more cashback cards instead.  </p>
+                            <% } else { %>
+                                <h1> CANCEL! </h1>
+                                <p> Based off of the information that you have entered, it appears that you are <strong> not </strong> getting your money's worth.                                </p>
+                                  <p>You would earn more money if you instead use a 2% no annual fee cashback credit card for all purchases</p>
+                                  <p>To determine Net Total Value of CSR vs. 2% cashback card, a benefit of $50 is given to the 2% cashback card, to help minimize unnecessary paying of fees</p>
+                                <% } %>
+
+
+<div class="row">
+  <div class="col-sm-6">
+    <h3 class="text-left">Your Inputs:</h3>
+    <table class="table table-responsive table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Input</th>
+                <th scope="col">Value</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Value Per UR Point</th>
+                <td><%= verdict.valueUR %> cents per point</td>
+              </tr> 
+              <tr>
+                <th scope="row">Annual Travel Spending</th>
+                <td>$ <%= verdict.spendTravel.toLocaleString() %></td>
+            </tr>
+            <tr>
+                <th scope="row">Annual Dine Out Spending</th>
+                <td>$ <%= verdict.spendDining.toLocaleString() %></td>
+            </tr>
+            <tr>
+                <th scope="row">Use the Freedom Unlimited?</th>
+                <td><%= verdict.usingCFU %></td>
+            </tr>
+                <tr>
+                    <th scope="row">Annual Spending Everywhere Else</th>
+                    <td>$ <%= verdict.spendEE.toLocaleString() %></td>
+                </tr>
+                <tr>
+                    <th scope="row"> Annual Travel Credit Value</th>
+                    <td>$ <%= verdict.valueCredit %></td>
+                </tr>
+                <tr>
+                    <th scope="row"> Priority Pass Membership Value </th>
+                    <td>$ <%= verdict.valuePP %></td>
+                </tr>
+                <tr>
+                    <th scope="row"> Annual Travel Credit Value</th>
+                    <td>$ <%= verdict.valueInsurance %></td>
+                </tr>
+
+            </tbody>
+          </table>                      
+        </div>
+                <div class="col-sm-6">
+                    <h3 class="text-left">Results:</h3>
+                    <table class="table table-responsive table-striped">
+                                    <thead>
+                                      <tr>
+                                        <th scope="col">Output</th>
+                                        <th scope="col">Value</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                        <% if (verdict.usingCFU == 'Yes') { %>
+                                          <tr>
+                                              <th scope="row">Estimated Net Total Value from using CSR & CFU</th>
+                                              <td>$ <%= verdict.csrValue.toLocaleString() %></td>
+                                          </tr>
+                                        <% } else { %>
+                                          <tr>
+                                              <th scope="row">Estimated Net Total Value from using CSR</th>
+                                              <td>$ <%= verdict.csrValue.toLocaleString() %></td>
+                                          </tr>
+                                        <% } %>
+                                        <tr>
+                                            <th scope="row">Net Total Value if you had instead used a 2% Cashback Card 
+                                            </th>
+                                            <td>$ <%= verdict.replacementCardValue.toLocaleString() %></td>
+                                        </tr>
+                                      <tr>
+                                        <th scope="row">Total Points Earned</th>
+                                        <td><%= verdict.totalPointsEarned.toLocaleString() %> points</td>
+                                      </tr> 
+                                      <tr>
+                                        <th scope="row">Cash Value of the points Earned</th>
+                                        <td>$ <%= verdict.totalPointsValue.toLocaleString() %></td>
+                                    </tr>
+
+                                    </tbody>
+                                  </table>                      
+                                </div>
+                    </div>
+                  </div> 
+    </main>
+</body>
+</html>

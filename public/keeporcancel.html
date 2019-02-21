@@ -9,14 +9,13 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
         <link href="/css/input.css" rel="stylesheet" type="text/css" />
-
     </head>
 
     <body>
-        <!-- add in information about why you should keep or cancel the card. -->
-
             <div class="container my-5">
                     <intro>
+                        <h1 class="text-center">Note: Site is WIP, submit does not work</h1>
+
                         <h3 class="text-center">
                             <p>
                                 <strong>Keep Or Cancel for The Sapphire Reserve v2.0</strong>
@@ -24,12 +23,12 @@
                         </h3>
             
                         <div class="text-center">
-                            <p>This guide is specifically aimed at the
-                            <strong>Sapphire Reserve (CSR) </strong> credit card and
-                            it's supporting card, the Freedom Unlimited.</p>
+                            <p>This guide is specifically aimed at helping you make a decision about whether or not you would like to keep or cancel 
+                                the <strong>Sapphire Reserve </strong>credit card.
+
             
                             <p> This will walk you through a sequential series of questions and
-                                return a verdict unique to your situation.</p>
+                                return a verdict unique to your situation about whether or not you should continue keeping the card and paying the $450 annual fee.</p>
 
                             <p> Hovering over the information icon will give you some guidance for each question.</p>
                         </div>
@@ -41,7 +40,7 @@
             <div class="form-group">
                 <h5>
                     <strong>Question 1:</strong> How much do you value each Ultimate Rewards Point? <a href="#" data-toggle="tooltip" data-placement="right" title=
-                    "Values here range from 1.0 cents-per-point (1 UR point = 1 penny) to up to 5.0 cents per point (5 pennies = 1 UR). Typical values of redemptions fall somewhere between 1.0-2.0 cpp. However, for people who redeem exclusively international business/first class it is possible to get higher values than this. If you are unsure, use 1.5 here">
+                    "Values here range from 1.0 cents per point (1 UR point = 1 penny) to up to 5.0 cents per point (5 pennies = 1 UR). Typical redemptions fall somewhere between 1.0-2.0 cpp. For people who redeem exclusively international business/first class it is possible to get higher values than this. If you are unsure, use 1.5 here">
                         <i class="fa fa-info-circle" aria-hidden=true></i></a>
                 </h5>
             </div>
@@ -107,8 +106,8 @@
         </div>
         <h5>
                 <span class="form-check">
-                    <input type="checkbox" name="useCFU" id="useCFU" class="form-check-input">
-                    <label class="form-check-label" for="useCFU"> Use Freedom Unlimited for Non-bonused Spending </label>
+                    <input type="checkbox"  style="cursor:pointer" name="useCFU" id="useCFU" class="form-check-input useCFU">
+                    <label class="form-check-label"  style="cursor:pointer" for="useCFU" class="useCFU"> Use Freedom Unlimited for Non-bonused Spending </label>
                 </span>
         </h5>
         <br>
@@ -192,16 +191,9 @@
         <input class="btn btn-primary btn block" type="reset" value="Reset" id="clear" name="clear"></input>
 
     </form>
-
 <script>
-    $(document).ready(function() {
-		$('[data-toggle="tooltip"]').tooltip();
-    });
-    
-    $('subtmitbutton').click(function() {
-		$('form').hide();
-    });
-
-</script>    
-    <script src="_js/main.js"></script>
+            $(document).ready(function() {
+                $('[data-toggle="tooltip"]').tooltip();
+            });
+</script>
 </body>

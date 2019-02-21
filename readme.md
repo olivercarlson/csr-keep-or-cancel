@@ -1,6 +1,6 @@
 # Keep or Cancel for the Chase Sapphire Reserve (CSR)
 
-Version 2.0 is not yet deployed.
+Version 2.0 is live as of 2/21/19.
 
 Version 1.0 of the site is currently deployed here: https://keeporcancel.netlify.com
 
@@ -9,16 +9,13 @@ Version 1.0 of the site is currently deployed here: https://keeporcancel.netlify
 Many friends and family members ask me about whether or not it's worth keeping this card, I wrote this calculator to give them the most objective
 advice possible. 
 
-This was written as my first website and deployed as a quick starter project to practice my web development skills.
-
 ## WHY:
 
-On release, the CSR was an extremely successful product launch - so much so, that JPM Chase ran out of metal to make the card. 
+Boasting a cash sign up bonus in excess of $1,000, for most it was an easy choice of whether or not to sign up for the card **for the first year**
 
-Boasting a sign up bonus of more than $1,000 in value, for most it was an easy choice of whether or not to sign up for the card **for the first year**
+However, after the first year's sign up bonus, the questino of whether or not it was worthwhile to pay the whopping $450 became more difficult. 
 
-However, after the first year's sign up bonus, it is very difficult to for many people to calculate whether or not they should continue paying
-the whopping $450 annual fee. 
+Most of the advice I saw online fell into one of two oversimplified and generally unhelpful camps: (A) "the card is so good, the bank is paying you to use this card" or (B) "$450 is way too much to pay for a credit card, cancel it!"
 
 Enter this guide.
 
@@ -37,3 +34,10 @@ to continue holding onto the CSR and paying $450.
 
 Additionally, if you choose to pair the CSR with another credit card (the Freedom Unlimited) and maximize your spending by switching between the two,
 you can see the sum value returned by holding and using both cards. 
+
+
+## Version Notes:
+
+In version 2.0, many changes were made. Application is now fullstack with Node/Express and Mongo.
+
+In next update, ideally I will add either E2E testing via Cypress or possibly just unit tests w/ either Mocha/Chai or Jest.
