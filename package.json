@@ -3,6 +3,9 @@
   "version": "2.0.0",
   "description": "Keep or Cancel for the CSR",
   "main": "app.js",
+  "engines": {
+    "node": "11.9.0"
+  },
   "scripts": {
     "test": "mocha",
     "sass": "sass --watch scss:public/css",
