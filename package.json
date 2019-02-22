@@ -14,9 +14,12 @@
   },
   "author": "Oliver Carlson",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git:https://github.com/olivercarlson/csr-keep-or-cancel.git"
+  },
   "devDependencies": {
-    "chai": "^4.2.0",
-    "mocha": "^6.0.0",
+    "cypress": "^3.1.5",
     "nodemon": "^1.18.10"
   },
   "dependencies": {
