@@ -44,7 +44,6 @@ const MONGODB_URI = `mongodb+srv://${process.env.MONGO_USER}:${
   process.env.MONGO_PASSWORD
 }@cluster0-bt32j.mongodb.net/${process.env.MONGO_DEFAULT_DATABASE}`;
 
-
 mongoose
   .connect(MONGODB_URI, {useNewUrlParser: true})
   .then(result => {

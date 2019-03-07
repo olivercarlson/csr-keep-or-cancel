@@ -1,8 +1,8 @@
 # Keep or Cancel for the Chase Sapphire Reserve (CSR)
 
-Version 2.0 is live as of 2/21/19.
+Version 2.0 is live as of 2/21/19, fully functional and deployed at: https://kocv2.herokuapp.com/
 
-Version 1.0 of the site is currently deployed here: https://keeporcancel.netlify.com
+Version 1.0 of the site.
 
 ## ABOUT:
 
@@ -40,4 +40,4 @@ you can see the sum value returned by holding and using both cards.
 
 In version 2.0, many changes were made. Application is now fullstack with Node/Express and Mongo.
 
-In next update, ideally I will add either E2E testing via Cypress or possibly just unit tests w/ either Mocha/Chai or Jest.
+In the next update, ideally I will add either E2E testing via Cypress or possibly just unit tests w/ either Mocha/Chai or Jest.

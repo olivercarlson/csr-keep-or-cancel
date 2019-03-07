@@ -15,7 +15,7 @@
     <main>    
             <div class="container-fluid text-center">
                     <% if (verdict.keepCSR)  { %>
-                        <h1> KEEP! </h1>
+                      <h1> KEEP! </h1>
                             <p> Based off of the information that you have entered, it appears that you <strong> are </strong> getting your money's worth out of the card. </p>
                         <% } else if (verdict.csrValue > verdict.replacementCardValue) { %>
                             <h1> CANCEL! </h1>
@@ -116,6 +116,7 @@
                                 </div>
                     </div>
                   </div> 
+                  <div style="margin: 40px 0 40px 0 " class="text-center"><a href="/keeporcancel.html"><button type="button" class="btn btn-primary">Return to the calculation page</button></a></button></div>
     </main>
 </body>
 </html>

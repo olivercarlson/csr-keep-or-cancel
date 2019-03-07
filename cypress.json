@@ -1,0 +1,5 @@
+{
+    "waitForAnimations": false,
+    "animationDistanceThreshold": 50,
+    "baseUrl": "http://localhost:3000"
+}
