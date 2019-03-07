@@ -23,7 +23,7 @@ describe('The Home Page', function() {
 
     cy.server()
 
-    cy.route('GET', '/get-results').as('get-resulsts')
+    cy.route('GET', '/get-results').as('get-results')
     
 });
 });
