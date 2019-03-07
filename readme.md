@@ -2,12 +2,11 @@
 
 Version 2.0 is live as of 2/21/19, fully functional and deployed at: https://kocv2.herokuapp.com/
 
-Version 1.0 of the site.
+Version 1.0 of the site. Deployed on Netlify, no backend, simply Vanilla JS and Bootstrap.
 
 ## ABOUT:
 
-Many friends and family members ask me about whether or not it's worth keeping this card, I wrote this calculator to give them the most objective
-advice possible. 
+Many friends and family members ask me about whether or not it's worth keeping this card, I wrote this calculator to give them the most objective advice possible. 
 
 ## WHY:
 
@@ -27,11 +26,11 @@ Each question has a corresponding drop down box which can provide guidance to th
 
 At the end, you will be taken to a page with a calculated result verdict. 
 
-This verdict will compare the estimated output (based on your input) with a replacement level 2% cashback card to see if it is worthwhile to continue holding onto the CSR and paying $450.
+This verdict will compare the estimated output (based on your input) with a replacement level 2% cashback card to see if it is worthwhile to continue holding onto the CSR and paying $450. Calculating the opportunity cost of using this card is an essential and oft forgotten part of making decisions.
 
-Additionally, if you choose to pair the CSR with another credit card (the Freedom Unlimited) and maximize your spending by switching between the two,
-you can see the sum value returned by holding and using both cards. 
+For completeness sake, there is an option to use the Freedom Unlimited. If the box is ticked, the calculator will assume optimized spending -- where you switching between the two (every dollar spent *not* in a 3X category will be spent with the Freedom Unlimited), you can see the sum value returned by holding and using both cards. 
 
+Note: While one could argue that including the Freedom 5% card(s) or INK+/Cash could give a more accurate picture of the cards value, it's important to remember that 5X/5% cashback is the realistic ceiling for earnings - regardless of the value of the points so there should be no effect on your decision to pay for the CSR.
 
 ## Version Notes:
 
