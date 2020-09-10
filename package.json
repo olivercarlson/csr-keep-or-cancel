@@ -19,8 +19,8 @@
     "url": "git:https://github.com/olivercarlson/csr-keep-or-cancel.git"
   },
   "devDependencies": {
-    "cypress": "^3.1.5",
-    "nodemon": "^1.18.10",
+    "cypress": "^5.1.0",
+    "nodemon": "^2.0.4",
     "start-server-and-test": "^1.7.11"
   },
   "dependencies": {
