@@ -8,7 +8,7 @@ const express = require('express'),
 	rateLimit = require('express-rate-limit'),
 	compression = require('compression');
 
-require('dotenv').config()
+require('dotenv').config();
 
 const app = express();
 
@@ -19,8 +19,7 @@ app.use(compression());
 const submitLimiter = rateLimit({
 	windowMs: 24 * 60 * 60 * 1000,
 	max: 30,
-	message: 
-	"Too many submissions, IPs are capped at 30 submissions per day."
+	message: 'Too many submissions, IPs are capped at 30 submissions per day.',
 });
 
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -40,15 +39,11 @@ app.use((req, res, next) => {
 	res.send('Error 404, location not found');
 });
 
-const MONGODB_URI = `mongodb+srv://${process.env.MONGO_USER}:${
-  process.env.MONGO_PASSWORD
-}@cluster0-bt32j.mongodb.net/${process.env.MONGO_DEFAULT_DATABASE}`;
-
 mongoose
-  .connect(MONGODB_URI, {useNewUrlParser: true})
-  .then(result => {
-      app.listen(process.env.PORT || 3000);
-  })
-  .catch(err => {
-    console.log(err);
-  });
+	.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+	.then((result) => {
+		app.listen(process.env.PORT || 3000);
+	})
+	.catch((err) => {
+		console.log(err);
+	});
