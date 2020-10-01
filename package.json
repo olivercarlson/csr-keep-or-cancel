@@ -1,36 +1,37 @@
 {
-  "name": "koc",
-  "version": "2.0.1",
-  "description": "Keep or Cancel for the CSR",
-  "main": "app.js",
-  "engines": {
-    "node": "11.9.0"
-  },
-  "scripts": {
-    "test": "cypress open",
-    "sass": "sass --watch scss:public/css",
-    "serve": "nodemon app.js",
-    "start": "npm run sass & npm run serve"
-  },
-  "author": "Oliver Carlson",
-  "license": "ISC",
-  "repository": {
-    "type": "git",
-    "url": "git:https://github.com/olivercarlson/csr-keep-or-cancel.git"
-  },
-  "devDependencies": {
-    "cypress": "^5.1.0",
-    "nodemon": "^2.0.4",
-    "start-server-and-test": "^1.7.11"
-  },
-  "dependencies": {
-    "body-parser": "^1.18.3",
-    "compression": "^1.7.3",
-    "dotenv": "^6.2.0",
-    "ejs": "^2.6.1",
-    "express": "^4.16.4",
-    "express-rate-limit": "^3.4.0",
-    "helmet": "^3.15.1",
-    "mongoose": "^5.7.5"
-  }
+	"name": "koc",
+	"version": "2.0.1",
+	"description": "Keep or Cancel for the CSR",
+	"main": "app.js",
+	"engines": {
+		"node": "11.9.0"
+	},
+	"scripts": {
+		"test": "cypress open",
+		"sass": "sass --watch scss:public/css",
+		"serve": "nodemon app.js",
+		"dev": "npm run sass & npm run serve",
+		"start": "node app.js"
+	},
+	"author": "Oliver Carlson",
+	"license": "ISC",
+	"repository": {
+		"type": "git",
+		"url": "git:https://github.com/olivercarlson/csr-keep-or-cancel.git"
+	},
+	"devDependencies": {
+		"cypress": "^5.1.0",
+		"nodemon": "^2.0.4",
+		"start-server-and-test": "^1.7.11"
+	},
+	"dependencies": {
+		"body-parser": "^1.18.3",
+		"compression": "^1.7.3",
+		"dotenv": "^6.2.0",
+		"ejs": "^2.6.1",
+		"express": "^4.16.4",
+		"express-rate-limit": "^3.4.0",
+		"helmet": "^3.15.1",
+		"mongoose": "^5.7.5"
+	}
 }
